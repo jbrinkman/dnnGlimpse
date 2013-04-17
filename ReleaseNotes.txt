@@ -1,0 +1,14 @@
+﻿<h3>dnnGlimpse</h3>
+<p class="Contributor">
+	Joe Brinkman <br />
+	<a href="mailto:joe@dnncorp.com">joe@dnncorp.com</a><br />
+	<a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About the dnnGlimpse Module</h3>
+	<p class="Owner">
+		<b>Version 1.0.0</b><br /><br />
+	</p>
+	<p>Description about version.</p>	
+</div>

@@ -1,0 +1,5 @@
+C:\Websites\Development\dnnGlimpse\bin\dnnGlimpse.dll
+C:\Websites\Development\dnnGlimpse\bin\dnnGlimpse.pdb
+C:\Websites\Development\dnnGlimpse\DesktopModules\dnnGlimpse\obj\Release\dnnGlimpse.dll
+C:\Websites\Development\dnnGlimpse\DesktopModules\dnnGlimpse\obj\Release\dnnGlimpse.pdb
+C:\Websites\Development\dnnGlimpse\DesktopModules\dnnGlimpse\obj\Release\dnnGlimpse.csprojResolveAssemblyReference.cache
