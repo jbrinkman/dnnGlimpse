@@ -79,8 +79,6 @@
   <ItemGroup>
     <Compile Include="Components\DotNetNukeSecurityPolicy.cs" />
     <Compile Include="Components\FeatureController.cs" />
-    <Compile Include="Components\ItemController.cs" />
-    <Compile Include="Components\Item.cs" />
     <Compile Include="dnnGlimpseModuleBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -116,10 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\View.ascx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Edit.ascx.resx" />
-    <Content Include="App_LocalResources\Settings.ascx.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\01.00.00.SqlDataProvider" />
