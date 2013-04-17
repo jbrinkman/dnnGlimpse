@@ -1,5 +1,0 @@
-C:\Websites\Development\dnnGlimpse\bin\dnnGlimpse.dll
-C:\Websites\Development\dnnGlimpse\bin\dnnGlimpse.pdb
-C:\Websites\Development\dnnGlimpse\DesktopModules\dnnGlimpse\obj\Debug\dnnGlimpse.csprojResolveAssemblyReference.cache
-C:\Websites\Development\dnnGlimpse\DesktopModules\dnnGlimpse\obj\Debug\dnnGlimpse.dll
-C:\Websites\Development\dnnGlimpse\DesktopModules\dnnGlimpse\obj\Debug\dnnGlimpse.pdb
