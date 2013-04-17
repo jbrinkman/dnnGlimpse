@@ -2,3 +2,5 @@
 /*.user
 /*.suo
 /install
+/Resources.zip.manifest
+/.build
