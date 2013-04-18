@@ -138,6 +138,7 @@
                         <ignoredTypes>
                           <add type="Glimpse.AspNet.Policy.LocalPolicy, Glimpse.AspNet"/>
                         </ignoredTypes>
+                        
                       </runtimePolicies>
                     </glimpse>
                   </node>
