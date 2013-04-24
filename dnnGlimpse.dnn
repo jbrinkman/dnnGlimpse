@@ -97,6 +97,9 @@
               <name>dnnGlimpse.dll</name>
             </assembly>
             <assembly>
+              <name>DotNetNuke.Extensions.Glimpse.dll</name>
+            </assembly>
+            <assembly>
               <name>Glimpse.AspNet.dll</name>
             </assembly>
             <assembly>

@@ -5,11 +5,30 @@
 
 <Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="MSBuild.Community.Tasks.Targets" />
+
+  <Target Name="GetFiles">
+    <ItemGroup>
+      <Binaries Include="$(MSBuildDnnBinPath)\*.*" />
+      <DebugSourceFiles 
+        Include=".\**\*.*" 
+        Exclude=".\obj\**\*;.\**\_ReSharper*\**;.\bin\**;.\**\packages\**;.\**\Install\**;.\**\BuildScripts\**;.\**\.git\**;.\**\.build\**;.\.gitignore;.\**\*.config;.\**\*.cs;.\**\*.*proj*;.\*.sln;.\*.suo" />
+    </ItemGroup>
+  </Target>
+  
+  <Target Name="CopyBin" DependsOnTargets="GetFiles">
+    <Copy SourceFiles="@(Binaries)" DestinationFolder="$(WebsiteBinPath)" />
+  </Target>
+
+  <Target Name="DebugProject" DependsOnTargets="CopyBin" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Copy 
+      SourceFiles="@(DebugSourceFiles)" 
+      DestinationFolder="$(WebsitePath)\DesktopModules\dnnGlimpse\%(RecursiveDir)">
+    </Copy>
+  </Target>
+
+
   <Target Name="PackageModule" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <XmlRead Prefix="n"
-                    Namespace="http://schemas.microsoft.com/developer/msbuild/2003"
-                    XPath="dotnetnuke/packages/package[1]/@version"
-                    XmlFileName="$(DNNFileName).dnn">
+    <XmlRead Prefix="n" Namespace="http://schemas.microsoft.com/developer/msbuild/2003" XPath="dotnetnuke/packages/package[1]/@version" XmlFileName="$(DNNFileName).dnn">
       <Output TaskParameter="Value" PropertyName="Version" />
     </XmlRead>
 
@@ -23,7 +42,7 @@
       <InstallInclude Include="**\*.resx" Exclude="packages\**" />
       <InstallInclude Include="**\*.aspx" Exclude="packages\**" />
       <InstallInclude Include="**\*.js" Exclude="packages\**" />
-      <InstallInclude Include="**\*.txt"  Exclude="**\obj\**;**\_ReSharper*\**;packages\**;" />
+      <InstallInclude Include="**\*.txt" Exclude="**\obj\**;**\_ReSharper*\**;packages\**;" />
       <InstallInclude Include="**\images\**" Exclude="packages\**" />
       <InstallInclude Include="**\icons\**" Exclude="packages\**" />
 
@@ -67,9 +86,10 @@
       <Output TaskParameter="Include" ItemName="SqlDataProviderFiles" />
     </CreateItem>
 
-    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
-    <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.aspnet.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
-    <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.core.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\DotNetNuke.Extensions.Glimpse.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.aspnet.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.core.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
     <Copy SourceFiles="@(SqlDataProviderFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package\%(RecursiveDir)" />
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
     <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
@@ -93,11 +113,11 @@
     <!-- Copy the Install package to the Packages folder -->
     <Copy SourceFiles="$(MSBuildProjectDirectory)\$(PackageName)_$(Version)_Install.$(Extension)" DestinationFolder="install/" />
     
-    <RemoveDir Directories ="$(MSBuildProjectDirectory)\Package" />
-    <RemoveDir Directories ="$(MSBuildProjectDirectory)\ResourcesZip" />
+    <RemoveDir Directories="$(MSBuildProjectDirectory)\Package" />
+    <RemoveDir Directories="$(MSBuildProjectDirectory)\ResourcesZip" />
 
     
-    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
     <Copy SourceFiles="@(SqlDataProviderFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package\%(RecursiveDir)" />
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
     <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
@@ -124,9 +144,9 @@
 
     <Delete Files="$(MSBuildProjectDirectory)\Resources.Zip" />
 
-    <RemoveDir Directories ="$(MSBuildProjectDirectory)\Package" />
+    <RemoveDir Directories="$(MSBuildProjectDirectory)\Package" />
 
-    <RemoveDir Directories ="$(MSBuildProjectDirectory)\ResourcesZip" />
+    <RemoveDir Directories="$(MSBuildProjectDirectory)\ResourcesZip" />
     
   </Target>
 </Project>
