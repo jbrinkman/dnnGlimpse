@@ -117,10 +117,6 @@
     <Content Include="App_LocalResources\View.ascx.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\01.00.00.SqlDataProvider" />
-    <Content Include="Data\Uninstall.SqlDataProvider" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
