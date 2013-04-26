@@ -7,3 +7,5 @@
 Modules\dnnGlimpse\obj/
 Website/
 packages/
+Modules/dnnGlimpse/install/
+*.txt
