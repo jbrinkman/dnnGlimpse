@@ -4,3 +4,6 @@
 /install
 /Resources.zip.manifest
 /.build
+Modules\dnnGlimpse\obj/
+Website/
+packages/
