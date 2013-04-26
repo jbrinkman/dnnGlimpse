@@ -9,3 +9,4 @@ Website/
 packages/
 Modules/dnnGlimpse/install/
 *.txt
+Packages.dgml
