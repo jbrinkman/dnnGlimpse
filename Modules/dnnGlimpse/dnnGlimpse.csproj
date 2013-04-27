@@ -114,7 +114,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse.csproj">
+    <ProjectReference Include="..\..\Libraries\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse.csproj">
       <Project>{76d0dc88-1add-47e8-bd37-0c50f0d0b27b}</Project>
       <Name>DotNetNuke.Extensions.Glimpse</Name>
     </ProjectReference>
