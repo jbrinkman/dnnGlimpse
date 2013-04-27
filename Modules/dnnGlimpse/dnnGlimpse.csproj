@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\FeatureController.cs" />
+    <Compile Include="PopupRuntimePolicy.cs" />
     <Compile Include="dnnGlimpseModuleBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
