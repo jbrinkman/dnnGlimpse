@@ -110,6 +110,9 @@
                   <node path="/configuration/system.webServer/handlers" action="update" key="name" collision="overwrite">
                     <add name="Glimpse" path="glimpse.axd" verb="GET" type="Glimpse.AspNet.HttpHandler, Glimpse.AspNet" preCondition="integratedMode" />
                   </node>
+                  <node path="/configuration/system.web" targetpath="/configuration/system.web/trace" action="update" collision="ignore">
+                    <trace writeToDiagnosticsTrace="true" enabled="true" pageOutput="false" />
+                  </node>
                   <node path="/configuration" action="update" targetpath="/configuration/glimpse" collision="ignore">
                     <glimpse defaultRuntimePolicy="On" endpointBaseUri="~/Glimpse.axd">
                       <!-- If you are having issues with Glimpse, please include this. It will help us figure out whats going on. -->
@@ -138,6 +141,7 @@
                   <node path="/configuration/system.webServer/modules/add[@name='Glimpse']" action="remove" />
                   <node path="/configuration/system.webServer/handlers/add[@name='Glimpse']" action="remove" />
                   <node path="/configuration/configSections/section[@name='glimpse']" action="remove" />
+                  <node path="/configuration/system.web/trace" action="remove" />
                   <node path="/configuration/glimpse" action="remove" />
                 </nodes>
               </configuration>
