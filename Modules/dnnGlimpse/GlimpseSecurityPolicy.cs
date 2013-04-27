@@ -1,5 +1,4 @@
-﻿using Glimpse.AspNet.Extensions;
-using Glimpse.Core.Extensibility;
+﻿using Glimpse.Core.Extensibility;
  
 using DotNetNuke.Entities.Users;
 
