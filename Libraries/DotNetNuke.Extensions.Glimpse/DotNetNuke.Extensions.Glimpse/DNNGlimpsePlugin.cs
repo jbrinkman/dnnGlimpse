@@ -45,7 +45,7 @@ namespace DotNetNuke.Extensions.Glimpse
                     {
                         AutoAddPortalAlias = hostSettings["AutoAddPortalAlias"],
                         Host.ControlPanel,
-                        Host.FileExtensions,
+                        Host.AllowedExtensionWhitelist,
                         Host.ModuleCachingMethod,
                         Host.HostEmail,
                         Host.HostTitle,
