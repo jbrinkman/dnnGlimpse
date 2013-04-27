@@ -115,20 +115,15 @@
                   </node>
                   <node path="/configuration" action="update" targetpath="/configuration/glimpse" collision="ignore">
                     <glimpse defaultRuntimePolicy="On" endpointBaseUri="~/Glimpse.axd">
-                      <!-- If you are having issues with Glimpse, please include this. It will help us figure out whats going on. -->
-                      <logging level="Off" />
-                      
+                      <!-- If you are having issues with Glimpse, please include this. It will help us figure out whats going on.
+                      <logging level="Trace" /> -->
                       <runtimePolicies>
                         <uris>
-                          <!-- Blacklist popups so we don't include Glimpse in the popup window -->
-                          <add regex=".*popup=true.*"/>
+                          <add regex=".*popup=true.*" /> <!-- Blacklist popups so we don't include Glimpse in the popup window -->
                         </uris>
-                        
-                        <!-- Remove the local policy so we can run it as needed, even on remote servers -->
                         <ignoredTypes>
-                          <add type="Glimpse.AspNet.Policy.LocalPolicy, Glimpse.AspNet"/>
+                          <add type="Glimpse.AspNet.Policy.LocalPolicy, Glimpse.AspNet" /> <!-- Remove the local policy so we can run it as needed, even on remote servers -->
                         </ignoredTypes>
-                        
                       </runtimePolicies>
                     </glimpse>
                   </node>
