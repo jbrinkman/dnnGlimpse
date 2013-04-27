@@ -110,7 +110,7 @@
                   <node path="/configuration/system.webServer/handlers" action="update" key="name" collision="overwrite">
                     <add name="Glimpse" path="glimpse.axd" verb="GET" type="Glimpse.AspNet.HttpHandler, Glimpse.AspNet" preCondition="integratedMode" />
                   </node>
-                  <node path="/configuration" action="update" key="name" collision="overwrite">
+                  <node path="/configuration" action="update" targetpath="/configuration/glimpse" collision="ignore">
                     <glimpse defaultRuntimePolicy="On" endpointBaseUri="~/Glimpse.axd">
                       <!-- If you are having issues with Glimpse, please include this. It will help us figure out whats going on. -->
                       <logging level="Off" />
