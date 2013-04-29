@@ -1,7 +1,7 @@
-﻿// <copyright file="PopupRuntimePolicy.cs" company="Engage Software">
+﻿// <copyright file="PopupRuntimePolicy.cs" company="DotNetNuke Corp.">
 // dnnGlimpse
-// Copyright (c) 2004-2013
-// by Engage Software ( http://www.engagesoftware.com )
+// Copyright (c) 2013
+// by DotNetNuke Corp.
 // </copyright>
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
 // TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
