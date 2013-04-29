@@ -78,14 +78,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\FeatureController.cs" />
-    <Compile Include="PopupRuntimePolicy.cs" />
+    <Compile Include="Security\PopupRuntimePolicy.cs" />
     <Compile Include="dnnGlimpseModuleBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dnnGlimpseModuleSettingsBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Security\GlimpseSecurityPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View.ascx.cs">
       <DependentUpon>View.ascx</DependentUpon>

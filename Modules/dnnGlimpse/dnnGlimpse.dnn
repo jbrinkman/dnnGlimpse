@@ -98,9 +98,6 @@
             <install>
               <configuration>
                 <nodes>
-                  <!--<node path="/configuration/system.webServer/modules" action="update" key="name" collision="overwrite">
-                    <add name="ShoutemAPI" type="DotNetNuke.Modules.Shoutem.Components.InitializeApplication, Shoutem" preCondition="managedHandler"/>
-                  </node>-->
                   <node path="/configuration/configSections" action="update" key="name" collision="overwrite">
                     <section name="glimpse" type="Glimpse.Core.Configuration.Section, Glimpse.Core" />
                   </node>

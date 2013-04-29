@@ -3,7 +3,7 @@ using Glimpse.Core.Extensibility;
  
 using DotNetNuke.Entities.Users;
 
-namespace DotNetNuke.Modules.dnnGlimpse
+namespace DotNetNuke.Modules.dnnGlimpse.Security
 {
     public class GlimpseSecurityPolicy:IRuntimePolicy
     {
