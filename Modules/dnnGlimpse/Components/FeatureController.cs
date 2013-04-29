@@ -1,19 +1,15 @@
-/*
-' Copyright (c) 2013 Christoc.com
-'  All rights reserved.
-' 
-' THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
-' TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-' THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-' CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-' DEALINGS IN THE SOFTWARE.
-' 
-*/
+// <copyright file="FeatureController.cs" company="DotNetNuke Corp.">
+// dnnGlimpse
+// Copyright (c) 2013
+// by DotNetNuke Corp.
+// </copyright>
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+// TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+// CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+// DEALINGS IN THE SOFTWARE.
 
-using System.Collections.Generic;
-//using System.Xml;
 using DotNetNuke.Entities.Modules;
-using DotNetNuke.Services.Search;
 using DotNetNuke.Entities.Tabs;
 using DotNetNuke.Entities.Modules.Definitions;
 using DotNetNuke.Common.Utilities;
@@ -110,100 +106,5 @@ namespace DotNetNuke.Modules.dnnGlimpse.Components
                 Upgrade.AddModuleToPage(hostTab, moduleDef.ModuleDefID, tabName, largeIcon, true);
             }
         }
-
-
-        #region Optional Interfaces
-
-        /// -----------------------------------------------------------------------------
-        /// <summary>
-        /// ExportModule implements the IPortable ExportModule Interface
-        /// </summary>
-        /// <param name="ModuleID">The Id of the module to be exported</param>
-        /// -----------------------------------------------------------------------------
-        //public string ExportModule(int ModuleID)
-        //{
-        //string strXML = "";
-
-        //List<dnnGlimpseInfo> coldnnGlimpses = GetdnnGlimpses(ModuleID);
-        //if (coldnnGlimpses.Count != 0)
-        //{
-        //    strXML += "<dnnGlimpses>";
-
-        //    foreach (dnnGlimpseInfo objdnnGlimpse in coldnnGlimpses)
-        //    {
-        //        strXML += "<dnnGlimpse>";
-        //        strXML += "<content>" + DotNetNuke.Common.Utilities.XmlUtils.XMLEncode(objdnnGlimpse.Content) + "</content>";
-        //        strXML += "</dnnGlimpse>";
-        //    }
-        //    strXML += "</dnnGlimpses>";
-        //}
-
-        //return strXML;
-
-        //	throw new System.NotImplementedException("The method or operation is not implemented.");
-        //}
-
-        /// -----------------------------------------------------------------------------
-        /// <summary>
-        /// ImportModule implements the IPortable ImportModule Interface
-        /// </summary>
-        /// <param name="ModuleID">The Id of the module to be imported</param>
-        /// <param name="Content">The content to be imported</param>
-        /// <param name="Version">The version of the module to be imported</param>
-        /// <param name="UserId">The Id of the user performing the import</param>
-        /// -----------------------------------------------------------------------------
-        //public void ImportModule(int ModuleID, string Content, string Version, int UserID)
-        //{
-        //XmlNode xmldnnGlimpses = DotNetNuke.Common.Globals.GetContent(Content, "dnnGlimpses");
-        //foreach (XmlNode xmldnnGlimpse in xmldnnGlimpses.SelectNodes("dnnGlimpse"))
-        //{
-        //    dnnGlimpseInfo objdnnGlimpse = new dnnGlimpseInfo();
-        //    objdnnGlimpse.ModuleId = ModuleID;
-        //    objdnnGlimpse.Content = xmldnnGlimpse.SelectSingleNode("content").InnerText;
-        //    objdnnGlimpse.CreatedByUser = UserID;
-        //    AdddnnGlimpse(objdnnGlimpse);
-        //}
-
-        //	throw new System.NotImplementedException("The method or operation is not implemented.");
-        //}
-
-        /// -----------------------------------------------------------------------------
-        /// <summary>
-        /// GetSearchItems implements the ISearchable Interface
-        /// </summary>
-        /// <param name="ModInfo">The ModuleInfo for the module to be Indexed</param>
-        /// -----------------------------------------------------------------------------
-        //public DotNetNuke.Services.Search.SearchItemInfoCollection GetSearchItems(DotNetNuke.Entities.Modules.ModuleInfo ModInfo)
-        //{
-        //SearchItemInfoCollection SearchItemCollection = new SearchItemInfoCollection();
-
-        //List<dnnGlimpseInfo> coldnnGlimpses = GetdnnGlimpses(ModInfo.ModuleID);
-
-        //foreach (dnnGlimpseInfo objdnnGlimpse in coldnnGlimpses)
-        //{
-        //    SearchItemInfo SearchItem = new SearchItemInfo(ModInfo.ModuleTitle, objdnnGlimpse.Content, objdnnGlimpse.CreatedByUser, objdnnGlimpse.CreatedDate, ModInfo.ModuleID, objdnnGlimpse.ItemId.ToString(), objdnnGlimpse.Content, "ItemId=" + objdnnGlimpse.ItemId.ToString());
-        //    SearchItemCollection.Add(SearchItem);
-        //}
-
-        //return SearchItemCollection;
-
-        //	throw new System.NotImplementedException("The method or operation is not implemented.");
-        //}
-
-        /// -----------------------------------------------------------------------------
-        /// <summary>
-        /// UpgradeModule implements the IUpgradeable Interface
-        /// </summary>
-        /// <param name="Version">The current version of the module</param>
-        /// -----------------------------------------------------------------------------
-        //public string UpgradeModule(string Version)
-        //{
-        //	throw new System.NotImplementedException("The method or operation is not implemented.");
-        //}
-
-        #endregion
-
-
     }
-
 }

@@ -79,17 +79,10 @@
   <ItemGroup>
     <Compile Include="Components\FeatureController.cs" />
     <Compile Include="Security\PopupRuntimePolicy.cs" />
-    <Compile Include="dnnGlimpseModuleBase.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dnnGlimpseModuleSettingsBase.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Security\GlimpseSecurityPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View.ascx.cs">
       <DependentUpon>View.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View.ascx.designer.cs">
       <DependentUpon>View.ascx</DependentUpon>
@@ -121,16 +114,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse.csproj">
+    <ProjectReference Include="..\..\Libraries\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse.csproj">
       <Project>{76d0dc88-1add-47e8-bd37-0c50f0d0b27b}</Project>
       <Name>DotNetNuke.Extensions.Glimpse</Name>
     </ProjectReference>
