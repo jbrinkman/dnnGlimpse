@@ -1,4 +1,4 @@
-﻿// <copyright file="GlimpseSecurityPolicy.cs" company="DotNetNuke Corp.">
+﻿// <copyright file="SuperUserRuntimePolicy.cs" company="DotNetNuke Corp.">
 // dnnGlimpse
 // Copyright (c) 2013
 // by DotNetNuke Corp.
@@ -15,7 +15,7 @@ using DotNetNuke.Entities.Users;
 
 namespace DotNetNuke.Modules.dnnGlimpse.Security
 {
-    public class GlimpseSecurityPolicy:IRuntimePolicy
+    public class SuperUserRuntimePolicy : IRuntimePolicy
     {
         public RuntimePolicy Execute(IRuntimePolicyContext policyContext)
         {
