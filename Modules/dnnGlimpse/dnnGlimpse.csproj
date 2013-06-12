@@ -53,13 +53,13 @@
       <HintPath>..\..\Libraries\References\DotNetNuke.Web.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Glimpse.AspNet, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Glimpse.AspNet, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Glimpse.AspNet.1.2.2\lib\net40\Glimpse.AspNet.dll</HintPath>
+      <HintPath>..\..\packages\Glimpse.AspNet.1.3.0\lib\net40\Glimpse.AspNet.dll</HintPath>
     </Reference>
-    <Reference Include="Glimpse.Core, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Glimpse.Core, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Glimpse.1.3.3\lib\net40\Glimpse.Core.dll</HintPath>
+      <HintPath>..\..\packages\Glimpse.1.4.1\lib\net40\Glimpse.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -159,7 +159,7 @@
     <WebsiteInstallPath>$(WebsitePath)\Install\Module</WebsiteInstallPath>
     <WebsiteBinPath>$(WebsitePath)\bin</WebsiteBinPath>
     <MSBuildDnnBinPath>$(MSBuildProjectDirectory)\$(OutputPath)</MSBuildDnnBinPath>
-    <MSBuildCommunityTasksPath>$(SolutionDir)\packages\MSBuildTasks.1.4.0.56\tools</MSBuildCommunityTasksPath>
+    <MSBuildCommunityTasksPath>$(SolutionDir)\packages\MSBuildTasks.1.4.0.61\tools</MSBuildCommunityTasksPath>
   </PropertyGroup>
   <Import Project="BuildScripts\ModulePackage.Targets" />
   <Target Name="AfterBuild" DependsOnTargets="DebugProject;PackageModule;">

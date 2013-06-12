@@ -5,6 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dnnGlimpse", "Modules\dnnGl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetNuke.Extensions.Glimpse", "Libraries\DotNetNuke.Extensions.Glimpse\DotNetNuke.Extensions.Glimpse.csproj", "{76D0DC88-1ADD-47E8-BD37-0C50F0D0B27B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{E606E686-16C2-4611-A444-B43B38BCB0F2}"
+	ProjectSection(SolutionItems) = preProject
+		Build.proj = Build.proj
+		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
+		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
