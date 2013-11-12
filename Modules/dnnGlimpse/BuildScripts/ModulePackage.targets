@@ -90,6 +90,7 @@
     <Copy SourceFiles="$(MSBuildDnnBinPath)\DotNetNuke.Extensions.Glimpse.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
     <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.aspnet.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
     <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.core.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
+    <Copy SourceFiles="$(MSBuildDnnBinPath)\Glimpse.webforms.dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin" />
     <Copy SourceFiles="@(SqlDataProviderFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package\%(RecursiveDir)" />
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
     <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />

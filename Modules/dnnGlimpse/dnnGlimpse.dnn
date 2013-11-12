@@ -89,6 +89,9 @@
             <assembly>
               <name>Glimpse.Core.dll</name>
             </assembly>
+            <assembly>
+              <name>Glimpse.WebForms.dll</name>
+            </assembly>
           </assemblies>
         </component>
 

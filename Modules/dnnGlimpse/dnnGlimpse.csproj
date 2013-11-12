@@ -59,6 +59,9 @@
     <Reference Include="Glimpse.Core">
       <HintPath>..\..\packages\Glimpse.1.8.0\lib\net40\Glimpse.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.WebForms">
+      <HintPath>..\..\packages\Glimpse.WebForms.1.0.2\lib\net40\Glimpse.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -103,7 +106,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BuildScripts\ModulePackage.targets" />
+    <Content Include="BuildScripts\ModulePackage.targets">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
   </ItemGroup>
   <ItemGroup>
