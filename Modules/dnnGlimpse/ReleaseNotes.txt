@@ -1,14 +1,30 @@
-﻿<h3>dnnGlimpse</h3>
+﻿<html>
+<head></head>
+<body>
+<div class="releaseNotes">
+<h3>dnnGlimpse</h3>
 <p class="Contributor">
 	Joe Brinkman <br />
 	<a href="mailto:joe@dnncorp.com">joe@dnncorp.com</a><br />
 	<a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a><br />
 </p>
+<p class="Contributor">
+	Brian Dukes
+</p>
 <hr/>
-<div class="License">
-	<h3>About the dnnGlimpse Module</h3>
-	<p class="Owner">
-		<b>Version 1.0.0</b><br /><br />
+<div class="notes">
+	<h3>About dnnGlimpse </h3>
+	<div class="Owner">
+		<b>Version 1.0.3</b>
+	</div>
+	<p>This version includes the following changes:
+    <ul>
+        <li>Upgraded Glimpse.Core to 1.8.0</li>
+        <li>Upgraded Glimpse.ASPNet to 1.6.0</li>
+        <li>Added Glimpse.WebForms to 1.0.2</li>
+    </ul>	
 	</p>
-	<p>Description about version.</p>	
 </div>
+</div>
+</body>
+<html>
