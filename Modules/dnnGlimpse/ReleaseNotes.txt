@@ -2,29 +2,44 @@
 <head></head>
 <body>
 <div class="releaseNotes">
-<h3>dnnGlimpse</h3>
-<p class="Contributor">
-	Joe Brinkman <br />
-	<a href="mailto:joe@dnncorp.com">joe@dnncorp.com</a><br />
-	<a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a><br />
-</p>
-<p class="Contributor">
-	Brian Dukes
-</p>
-<hr/>
-<div class="notes">
-	<h3>About dnnGlimpse </h3>
-	<div class="Owner">
-		<b>Version 1.0.3</b>
-	</div>
-	<p>This version includes the following changes:
-    <ul>
-        <li>Upgraded Glimpse.Core to 1.8.0</li>
-        <li>Upgraded Glimpse.ASPNet to 1.6.0</li>
-        <li>Added Glimpse.WebForms to 1.0.2</li>
-    </ul>	
-	</p>
-</div>
+    <h3>dnnGlimpse</h3>
+    <p class="Contributor">
+	    Joe Brinkman <br />
+	    <a href="mailto:joe@dnncorp.com">joe@dnncorp.com</a><br />
+	    <a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a><br />
+    </p>
+    <p class="Contributor">
+	    Brian Dukes
+    </p>
+    <hr/>
+    <div class="notes">
+	    <h3>About dnnGlimpse </h3>
+	    <div class="Owner">
+		    <b>Version 1.0.4</b>
+	    </div>
+	    <p>This version includes the following changes:</p>
+        <ul>
+            <li>Upgraded Glimpse.ASP.NET to 1.7.0 (middleweight release)
+                <ul>
+                    <li>New data caching tab for <code>HttpRuntime.Cache</code></li>
+                    <li>Improved handling of connection strings in Configuration tab including the ability for a user to define which keys/values inside a connectionString which should be obfuscated</li>
+                </ul>
+            </li>
+            <li>Upgraded Glimpse.Core to 1.8.1 (featherweight release)
+                <ul>
+                    <li>Fixed style issue which forced Glimpse tables to be full width</li>
+                    <li>Added new client events around HUD init process</li>
+                    <li>Fixed encoding issue in the AJAX HUD ticker</li>
+                    <li>Fixed issues with certain CORS requests failing due to unexpected header modifications</li>
+                    <li>Fix to HUD’s poor wrapping on small screens</li>
+                    <li>Fixed possible in-memory persistence store thread issue</li>
+                    <li>Update structured layouts so titles can have the new casing logic applied</li>
+                    <li>Updates to make Glimpse.axd compliant with content security policies</li>
+                    <li>Allow users to disable use of Logical Call Context via <code>Glimpse:DisableAsyncSupport</code> AppSettings switch</li>
+                </ul>
+            </li>
+        </ul>	
+    </div>
 </div>
 </body>
 <html>
