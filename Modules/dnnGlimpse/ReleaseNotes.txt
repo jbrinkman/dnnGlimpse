@@ -15,27 +15,33 @@
     <div class="notes">
 	    <h3>About dnnGlimpse </h3>
 	    <div class="Owner">
-		    <b>Version 1.0.4</b>
+		    <b>Version 1.0.5</b>
 	    </div>
 	    <p>This version includes the following changes:</p>
         <ul>
-            <li>Upgraded Glimpse.ASP.NET to 1.7.0 (middleweight release)
+            <li>Upgraded Glimpse.ASP.NET to 1.8.0 (welterweight release)
                 <ul>
-                    <li>New data caching tab for <code>HttpRuntime.Cache</code></li>
-                    <li>Improved handling of connection strings in Configuration tab including the ability for a user to define which keys/values inside a connectionString which should be obfuscated</li>
+                    <li>Update Route Inspector to ignore non AspNet based routes (this fixes problems with Glimpse and WebAPI)</li>
+                    <li>Added updated Server Tab which shows common server variables</li>
+                    <!--li>Clean up web.config transform to remove volume of commented out config in the glimpse section</li-->
+                    <li>Update Request Tab serialization to handle request validation failures</li>
                 </ul>
             </li>
-            <li>Upgraded Glimpse.Core to 1.8.1 (featherweight release)
+            <li>Upgraded Glimpse.WebForms to 1.1.0 (lightweight release)
                 <ul>
-                    <li>Fixed style issue which forced Glimpse tables to be full width</li>
-                    <li>Added new client events around HUD init process</li>
-                    <li>Fixed encoding issue in the AJAX HUD ticker</li>
-                    <li>Fixed issues with certain CORS requests failing due to unexpected header modifications</li>
-                    <li>Fix to HUD’s poor wrapping on small screens</li>
-                    <li>Fixed possible in-memory persistence store thread issue</li>
-                    <li>Update structured layouts so titles can have the new casing logic applied</li>
-                    <li>Updates to make Glimpse.axd compliant with content security policies</li>
-                    <li>Allow users to disable use of Logical Call Context via <code>Glimpse:DisableAsyncSupport</code> AppSettings switch</li>
+                    <li>Added visualization for DataBinding in the ControlTree Tab</li>
+                    <li>Improve basic ViewState processing for SqlDataSource, LinqDataSource and ObjectDataSource</li>
+                </ul>
+            </li>
+            <li>Upgraded Glimpse.Core to 1.8.2 (featherweight release)
+                <ul>
+                    <li>Update to disabled Glimpse when request init is bypassed</li>
+                    <li>Update client to only modify local ajax requests</li>
+                    <li>Add initial support for Glimpse.WindowsAzure and Glimpse.WindowsAzure.Storage</li>
+                    <li>Update to show friendly message if current async implementation is not supported</li>
+                    <li>Added initial Insights support to client</li>
+                    <li>Update client to delayed tab rendering till glimpse open</li>
+                    <li>Update client to added more blacklist items for target chars that should be ignored by case processor</li>
                 </ul>
             </li>
         </ul>	
