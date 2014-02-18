@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="dnnGlimpse" type="Module" version="01.00.05">
+    <package name="dnnGlimpse" type="Module" version="01.00.06">
       <friendlyName>dnnGlimpse</friendlyName>
       <description>DotNetNuke dnnGlimpse module</description>
       <iconFile>DesktopModules\dnnglimpse\icons\Glimpse_64px.gif</iconFile>
@@ -91,6 +91,9 @@
             </assembly>
             <assembly>
               <name>Glimpse.WebForms.dll</name>
+            </assembly>
+            <assembly>
+              <name>Glimpse.Ado.dll</name>
             </assembly>
           </assemblies>
         </component>

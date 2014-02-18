@@ -9,6 +9,7 @@
 // CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 // DEALINGS IN THE SOFTWARE.
 
+using Glimpse.AspNet.Extensions;
 using Glimpse.Core.Extensibility;
  
 using DotNetNuke.Entities.Users;
@@ -19,7 +20,7 @@ namespace DotNetNuke.Modules.dnnGlimpse.Security
     {
         public RuntimePolicy Execute(IRuntimePolicyContext policyContext)
         {
-            return UserController.GetCurrentUserInfo().IsSuperUser ? RuntimePolicy.On : RuntimePolicy.Off;
+            return UserController.GetCurrentUserInfo().IsSuperUser || policyContext.GetHttpContext().Request.IsLocal ? RuntimePolicy.On : RuntimePolicy.Off;
         }
 
         public RuntimeEvent ExecuteOn
