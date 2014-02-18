@@ -4,8 +4,8 @@
 
 /*.txt
 /*.dgml
-/*.user
 /*.suo
+*.user
 
 **/obj/
 **/bin/
