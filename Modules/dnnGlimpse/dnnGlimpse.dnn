@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="dnnGlimpse" type="Module" version="01.00.03">
+    <package name="dnnGlimpse" type="Module" version="01.00.05">
       <friendlyName>dnnGlimpse</friendlyName>
       <description>DotNetNuke dnnGlimpse module</description>
       <iconFile>DesktopModules\dnnglimpse\icons\Glimpse_64px.gif</iconFile>
@@ -123,6 +123,13 @@
                         </ignoredTypes>
                       </runtimePolicies>
                     </glimpse>
+                  </node>
+                  <node path="/configuration/glimpse" action="update" targetpath="/configuration/glimpse/tabs" collision="ignore">
+                    <tabs>
+                      <ignoredTypes>
+                        <add type="Glimpse.AspNet.Tab.Cache,Glimpse.AspNet" />
+                      </ignoredTypes>
+                    </tabs>
                   </node>
                 </nodes>
               </configuration>
