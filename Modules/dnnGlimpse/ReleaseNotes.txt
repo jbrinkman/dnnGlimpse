@@ -20,39 +20,15 @@
 	    </div>
 	    <p>This version includes the following changes:</p>
         <ul>
-            <li>Upgraded Glimpse.ASP.NET to 1.8.0 (welterweight release)
+            <li>Upgraded Glimpse.ASP.NET to 1.8.1 (bantamweight release)
                 <ul>
-                    <li>Update Route Inspector to ignore non AspNet based routes (this fixes problems with Glimpse and WebAPI)</li>
-                    <li>Added updated Server Tab which shows common server variables</li>
-                    <!--li>Clean up web.config transform to remove volume of commented out config in the glimpse section</li-->
-                    <li>Update Request Tab serialization to handle request validation failures</li>
+                    <li>Update to RouteInspector to ignore non AspNet routes doesn’t work for WebHosted WebAPIs</li>
                 </ul>
             </li>
-            <li>Upgraded Glimpse.WebForms to 1.1.0 (lightweight release)
+            <li>Upgraded Glimpse.Core to 1.8.4 (featherweight release)
                 <ul>
-                    <li>Added visualization for DataBinding in the ControlTree Tab</li>
-                    <li>Improve basic ViewState processing for SqlDataSource, LinqDataSource and ObjectDataSource</li>
-                </ul>
-            </li>
-            <li>Upgraded Glimpse.Core to 1.8.3 (featherweight release)
-                <ul>
-                    <li>Update to disabled Glimpse when request init is bypassed</li>
-                    <li>Update client to only modify local ajax requests</li>
-                    <li>Add initial support for Glimpse.WindowsAzure and Glimpse.WindowsAzure.Storage</li>
-                    <li>Update to show friendly message if current async implementation is not supported</li>
-                    <li>Added initial Insights support to client</li>
-                    <li>Update client to delayed tab rendering till glimpse open</li>
-                    <li>Update client to added more blacklist items for target chars that should be ignored by case processor</li>
-                </ul>
-            </li>
-            <li>Added Glimpse.ADO 1.7.0
-                <ul>
-                    <li>Adds the SQL Tab which provides SQL Profiling information</li>
-                </ul>
-            </li>
-            <li>Added Support for non Host Users
-                <ul>
-                    <li>When the request is local (127.0.0.1) Glimpse will be enabled for all users.  This allows developers to determine the behavior of the site for anonymous and regular users</li>
+                    <li>Fix up edge case where UI would not be resizable</li>
+                    <li>Extending the ContentTypeElement to include optional RuntimePolicy</li>
                 </ul>
             </li>
         </ul>	
