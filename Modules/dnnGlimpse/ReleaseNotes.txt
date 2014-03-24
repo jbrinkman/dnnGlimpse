@@ -16,7 +16,7 @@
     <div class="notes">
 	    <h3>About dnnGlimpse </h3>
 	    <div class="Owner">
-		    <b>Version 1.0.6</b>
+		    <b>Version 1.0.7</b>
 	    </div>
 	    <p>This version includes the following changes:</p>
         <ul>
@@ -52,7 +52,7 @@
             </li>
             <li>Added Support for non Host Users
                 <ul>
-                    <li>When the request is local (127.0.0.1) Glimpse will be enabled for all users.  This allows developers to determine the behavior of the site for anonymous and regular users</li>
+                    <li>When the request is local (127.0.0.1), or when a Host setting is true, Glimpse will be enabled for all users.  This allows developers to determine the behavior of the site for anonymous and regular users</li>
                 </ul>
             </li>
         </ul>	
