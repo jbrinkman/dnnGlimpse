@@ -17,7 +17,7 @@ namespace DotNetNuke.Modules.dnnGlimpse.Security
 {
     using Glimpse.Core.Extensibility;
 
-    public class PopupRuntimPolicy : IRuntimePolicy
+    public class PopupRuntimePolicy : IRuntimePolicy
     {
         public RuntimePolicy Execute(IRuntimePolicyContext policyContext)
         {
