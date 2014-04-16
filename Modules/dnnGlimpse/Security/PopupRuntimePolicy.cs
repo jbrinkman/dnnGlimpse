@@ -21,8 +21,7 @@ namespace DotNetNuke.Modules.dnnGlimpse.Security
     {
         public RuntimePolicy Execute(IRuntimePolicyContext policyContext)
         {
-            var enableForAllUsers = HostController.Instance.GetBoolean("Glimpse_enableForAllUsers", false);
-            return policyContext.RequestMetadata.RequestUri.ToLowerInvariant().Contains("popup=true") && (policyContext.GetHttpContext().Request.IsLocal || enableForAllUsers) ? RuntimePolicy.ModifyResponseBody : RuntimePolicy.On;
+            return policyContext.RequestMetadata.RequestUri.ToLowerInvariant().Contains("popup=true") ? RuntimePolicy.ModifyResponseBody : RuntimePolicy.On;
         }
 
         public RuntimeEvent ExecuteOn
