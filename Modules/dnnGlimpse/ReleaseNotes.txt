@@ -18,9 +18,27 @@
     <div class="notes">
 	    <h3>About dnnGlimpse </h3>
 	    <div class="Owner">
-		    <b>Version 1.0.7</b>
+		    <b>Version 1.0.8</b>
 	    </div>
 	    <p>This version includes the following changes:</p>
+        <ul>
+            <li>Upgraded Glimpse.Core to 1.8.5 (featherwight release)
+                <ul>
+                    <li>Fix where Clients that have a name with quotes in it blows up</li>
+                </ul>
+            </li>
+            <li>Upgraded Glimpse.AspNet to 1.9.0 (bantamweight release)
+                <ul>
+                    <li>Added support for attribute routes</li>
+                </ul>
+            </li>
+            <li>Upgraded Glimpse.Ado to 1.7.1 (welterweight release)
+                <ul>
+                    <li>Significant performance improvement when calling stored procedure with binary data param</li>
+                </ul>
+            </li>
+        </ul>	
+        <p>Previous changes include:</p>
         <ul>
             <li>Upgraded Glimpse.ASP.NET to 1.8.1 (bantamweight release)
                 <ul>
@@ -31,6 +49,11 @@
                 <ul>
                     <li>Fix up edge case where UI would not be resizable</li>
                     <li>Extending the ContentTypeElement to include optional RuntimePolicy</li>
+                </ul>
+            </li>
+            <li>Added Support for non Host Users
+                <ul>
+                    <li>When the request is local (127.0.0.1), or when a Host setting is true, Glimpse will be enabled for all users.  This allows developers to determine the behavior of the site for anonymous and regular users</li>
                 </ul>
             </li>
         </ul>	
