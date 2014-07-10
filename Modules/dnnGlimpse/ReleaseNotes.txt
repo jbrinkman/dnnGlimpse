@@ -39,8 +39,9 @@
                     <li>Fix issue to make Glimpse checks if it is enabled in DataBoundControlAdapter</li>
                 </ul>
             </li>
-            <li>Upgraded Glimpse.Ado to 1.7.2 (featherweight release)
+            <li>Upgraded Glimpse.Ado to 1.7.3 (featherweight release)
                 <ul>
+                    <li>Fix bug with EF 6.1.1</li>
                     <li>Ensure ADO inspector does quotes `AnsiString` parameters in query output</li>
                     <li>Ensure that all parameters in `CreateDbCommandDefinition` are forwarded through</li>
                     <li>Prevent command sanitizer from replacing partial matches of parameters</li>
