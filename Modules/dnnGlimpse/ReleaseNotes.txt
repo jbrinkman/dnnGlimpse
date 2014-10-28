@@ -6,50 +6,50 @@
     <p class="Contributor">
 	    Joe Brinkman <br />
 	    <a href="mailto:joe@dnncorp.com">joe@dnncorp.com</a><br />
-	    <a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a><br />
+	    <a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a>
     </p>
     <p class="Contributor">
 	    Brian Dukes
-		Charles Nurse
+    </p>
+    <p class="Contributor">
+	    Charles Nurse
     </p>
     <hr/>
     <div class="notes">
 	    <h3>About dnnGlimpse </h3>
 	    <div class="Owner">
-		    <b>Version 1.0.7</b>
+		    <b>Version 1.0.9</b>
 	    </div>
 	    <p>This version includes the following changes:</p>
         <ul>
-            <li>Upgraded Glimpse.ASP.NET to 1.8.0 (welterweight release)
+            <li>Upgraded Glimpse.Core to 1.8.6 (featherwight release)
                 <ul>
-                    <li>Update Route Inspector to ignore non AspNet based routes (this fixes problems with Glimpse and WebAPI)</li>
-                    <li>Added updated Server Tab which shows common server variables</li>
-                    <!--li>Clean up web.config transform to remove volume of commented out config in the glimpse section</li-->
-                    <li>Update Request Tab serialization to handle request validation failures</li>
+                    <li>Add button which makes it easy to launch glimpse for service only sites</li>
+                    <li>Improve how client renders for those using Zurb Foundation</li>
                 </ul>
             </li>
-            <li>Upgraded Glimpse.WebForms to 1.1.0 (lightweight release)
+            <li>Upgraded Glimpse.AspNet to 1.9.1 (featherweight release)
                 <ul>
-                    <li>Added visualization for DataBinding in the ControlTree Tab</li>
-                    <li>Improve basic ViewState processing for SqlDataSource, LinqDataSource and ObjectDataSource</li>
+                    <li>Fix issue for ajax requests that are using “Bufferless input streams”</li>
+                    <li>Show non-MvcRoute route types in route tab</li>
                 </ul>
             </li>
-            <li>Upgraded Glimpse.Core to 1.8.3 (featherweight release)
+            <li>Upgraded Glimpse.WebForms to 1.1.1 (featherweight release)
                 <ul>
-                    <li>Update to disabled Glimpse when request init is bypassed</li>
-                    <li>Update client to only modify local ajax requests</li>
-                    <li>Add initial support for Glimpse.WindowsAzure and Glimpse.WindowsAzure.Storage</li>
-                    <li>Update to show friendly message if current async implementation is not supported</li>
-                    <li>Added initial Insights support to client</li>
-                    <li>Update client to delayed tab rendering till glimpse open</li>
-                    <li>Update client to added more blacklist items for target chars that should be ignored by case processor</li>
+                    <li>Fix issue to make Glimpse checks if it is enabled in DataBoundControlAdapter</li>
                 </ul>
             </li>
-            <li>Added Glimpse.ADO 1.7.0
+            <li>Upgraded Glimpse.Ado to 1.7.3 (featherweight release)
                 <ul>
-                    <li>Adds the SQL Tab which provides SQL Profiling information</li>
+                    <li>Fix bug with EF 6.1.1</li>
+                    <li>Ensure ADO inspector does quotes `AnsiString` parameters in query output</li>
+                    <li>Ensure that all parameters in `CreateDbCommandDefinition` are forwarded through</li>
+                    <li>Prevent command sanitizer from replacing partial matches of parameters</li>
                 </ul>
             </li>
+        </ul>	
+        <p>Previous changes include:</p>
+        <ul>
             <li>Added Support for non Host Users
                 <ul>
                     <li>When the request is local (127.0.0.1), or when a Host setting is true, Glimpse will be enabled for all users.  This allows developers to determine the behavior of the site for anonymous and regular users</li>
