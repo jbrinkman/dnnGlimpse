@@ -21,6 +21,7 @@
 		<h5>Version 1.0.10</h5>
 	    <p>This version includes the following changes:</p>
         <ul>
+            <li>Don't show Glimpse in pop-ups</li>
             <li>Upgraded Glimpse.AspNet to 1.9.2 (featherwight release)
                 <ul>
                     <li>Added support for <code>AspNetSynchronizationContext</code></li>
