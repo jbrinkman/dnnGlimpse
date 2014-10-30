@@ -17,12 +17,11 @@ namespace DotNetNuke.Modules.dnnGlimpse.Security
 {
     using Glimpse.Core.Extensibility;
 
-    public class PopupRuntimPolicy : IRuntimePolicy
+    public class PopupRuntimePolicy : IRuntimePolicy
     {
         public RuntimePolicy Execute(IRuntimePolicyContext policyContext)
         {
-            var enableForAllUsers = HostController.Instance.GetBoolean("Glimpse_enableForAllUsers", false);
-            return policyContext.RequestMetadata.RequestUri.ToLowerInvariant().Contains("popUp=true") && (policyContext.GetHttpContext().Request.IsLocal || enableForAllUsers) ? RuntimePolicy.ModifyResponseBody : RuntimePolicy.On;
+            return policyContext.RequestMetadata.RequestUri.ToLowerInvariant().Contains("popup=true") ? RuntimePolicy.ModifyResponseBody : RuntimePolicy.On;
         }
 
         public RuntimeEvent ExecuteOn
