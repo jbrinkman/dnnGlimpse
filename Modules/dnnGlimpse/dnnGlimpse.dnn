@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="dnnGlimpse" type="Module" version="01.00.09">
+    <package name="dnnGlimpse" type="Module" version="01.00.10">
       <friendlyName>dnnGlimpse</friendlyName>
       <description>DotNetNuke dnnGlimpse module</description>
       <iconFile>DesktopModules\dnnglimpse\icons\Glimpse_64px.gif</iconFile>
