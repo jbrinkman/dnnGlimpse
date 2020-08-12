@@ -5,20 +5,25 @@
 <div class="releaseNotes">
     <h3>dnnGlimpse</h3>
     <p class="Contributor">
-	    Joe Brinkman <br />
-	    <a href="mailto:joe@dnncorp.com">joe@dnncorp.com</a><br />
-	    <a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a>
+	    <a href="https://github.com/jbrinkman">Joe Brinkman</a> <br />
+	    <a href="https://joe.brinkman.me/">https://joe.brinkman.me/</a>
     </p>
     <p class="Contributor">
-	    Brian Dukes
+	    <a href="https://github.com/bdukes">Brian Dukes</a>
     </p>
     <p class="Contributor">
-	    Charles Nurse
+	    <a href="https://github.com/cnurse">Charles Nurse</a>
     </p>
     <hr/>
     <div class="notes">
 	    <h3>About dnnGlimpse </h3>
-		<h5>Version 1.0.10</h5>
+		<h5>Version 1.1.0</h5>
+	    <p>This version includes the following changes:</p>
+        <ul>
+            <li>Supports DNN 9.3.0 or higher, thanks <a href="https://github.com/UpendoVentures">@UpendoVentures</a>!</li>
+        </ul>
+        <p>Previous changes include:</p>
+		<h6>Version 1.0.10</h6>
 	    <p>This version includes the following changes:</p>
         <ul>
             <li>Don't show Glimpse in pop-ups</li>
@@ -29,7 +34,6 @@
                 </ul>
             </li>
         </ul>
-        <p>Previous changes include:</p>
         <h6>Version 1.0.9</h6>
         <ul>
             <li>Upgraded Glimpse.Core to 1.8.6 (featherwight release)
