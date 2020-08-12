@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="dnnGlimpse" type="Module" version="01.00.10">
+    <package name="dnnGlimpse" type="Module" version="01.01.00">
       <friendlyName>dnnGlimpse</friendlyName>
       <description>DotNetNuke dnnGlimpse module</description>
       <iconFile>DesktopModules\dnnglimpse\icons\Glimpse_64px.gif</iconFile>
@@ -12,8 +12,9 @@
       </owner>
       <license src="License.txt"></license>
       <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <azureCompatible>True</azureCompatible>
       <dependencies>
-        <dependency type="CoreVersion">07.00.02</dependency>
+        <dependency type="CoreVersion">09.03.00</dependency>
       </dependencies>
       
       <components>
@@ -67,33 +68,44 @@
             <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
             <processorCommand>UpgradeModule</processorCommand>
             <attributes>
-              <businessControllerClass>DotNetNuke.Modules.dnnGlimpse.Components.FeatureController</businessControllerClass>
+              <businessControllerClass>DotNetNuke.Modules.dnnGlimpse.Components.FeatureController, dnnGlimpse</businessControllerClass>
               <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
-              <upgradeVersionsList>01.00.00</upgradeVersionsList>
+              <upgradeVersionsList>01.00.00,01.01.00</upgradeVersionsList>
             </attributes>
           </eventMessage>          
         </component>
         
         <component type="Assembly">
           <assemblies>
-            <basePath>bin</basePath>
             <assembly>
+              <path>bin</path>
               <name>dnnGlimpse.dll</name>
+              <version>01.01.00</version>
             </assembly>
             <assembly>
+              <path>bin</path>
               <name>DotNetNuke.Extensions.Glimpse.dll</name>
+              <version>01.01.00</version>
             </assembly>
             <assembly>
+              <path>bin</path>
               <name>Glimpse.AspNet.dll</name>
+              <version>01.09.02</version>
             </assembly>
             <assembly>
+              <path>bin</path>
               <name>Glimpse.Core.dll</name>
+              <version>01.08.06</version>
             </assembly>
             <assembly>
+              <path>bin</path>
               <name>Glimpse.WebForms.dll</name>
+              <version>01.01.01</version>
             </assembly>
             <assembly>
+              <path>bin</path>
               <name>Glimpse.Ado.dll</name>
+              <version>01.07.03</version>
             </assembly>
           </assemblies>
         </component>
