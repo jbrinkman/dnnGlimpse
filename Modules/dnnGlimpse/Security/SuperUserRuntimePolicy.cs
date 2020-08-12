@@ -23,7 +23,7 @@ namespace DotNetNuke.Modules.dnnGlimpse.Security
         public RuntimePolicy Execute(IRuntimePolicyContext policyContext)
         {
             var enableForAllUsers = HostController.Instance.GetBoolean("Glimpse_enableForAllUsers", false);
-            return UserController.GetCurrentUserInfo().IsSuperUser || policyContext.GetHttpContext().Request.IsLocal || enableForAllUsers ? RuntimePolicy.On : RuntimePolicy.Off;
+            return UserController.Instance.GetCurrentUserInfo().IsSuperUser || policyContext.GetHttpContext().Request.IsLocal || enableForAllUsers ? RuntimePolicy.On : RuntimePolicy.Off;
         }
 
         public RuntimeEvent ExecuteOn
