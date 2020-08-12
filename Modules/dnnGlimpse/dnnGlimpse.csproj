@@ -45,10 +45,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClientDependency.Core">
-      <HintPath>..\..\Libraries\References\ClientDependency.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DotNetNuke, Version=9.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DotNetNuke.Core.9.3.0\lib\net45\DotNetNuke.dll</HintPath>
     </Reference>
@@ -77,9 +73,6 @@
     <Reference Include="Glimpse.WebForms, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Glimpse.WebForms.1.1.1\lib\net40\Glimpse.WebForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DotNetNuke.Core.9.3.0\lib\net45\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
