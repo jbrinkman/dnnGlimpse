@@ -17,14 +17,16 @@ namespace DotNetNuke.Extensions.Glimpse
     using DotNetNuke.Entities.Controllers;
     using DotNetNuke.Entities.Host;
     using DotNetNuke.Entities.Portals;
+    using DotNetNuke.Instrumentation;
     using DotNetNuke.Services.Exceptions;
-    using DotNetNuke.Services.Personalization;
 
     using global::Glimpse.AspNet.Extensibility;
     using global::Glimpse.Core.Extensibility;
 
     public class DNNGlimpsePlugin : AspNetTab
     {
+        private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(DNNGlimpsePlugin));
+
         public override string Name
         {
             get { return "DNN"; }
@@ -36,7 +38,7 @@ namespace DotNetNuke.Extensions.Glimpse
             {
                 var hostSettings = HostController.Instance.GetSettingsDictionary();
                 var portalSettings = PortalSettings.Current;
-                var portalAliases = from PortalAliasInfo pa in new PortalAliasController().GetPortalAliasArrayByPortalID(portalSettings.PortalId)
+                var portalAliases = from PortalAliasInfo pa in PortalAliasController.Instance.GetPortalAliasesByPortalId(portalSettings.PortalId)
                                     select pa.HTTPAlias;
 
                 return new
@@ -87,8 +89,21 @@ namespace DotNetNuke.Extensions.Glimpse
             }
             catch (Exception ex)
             {
+                LogError(ex);
                 Exceptions.LogException(ex);
                 return "There was an error loading the data for this tab";
+            }
+        }
+
+        private void LogError(Exception ex)
+        {
+            if (ex == null) return;
+
+            Logger.Error(ex.Message, ex);
+
+            if (ex.InnerException != null)
+            {
+                LogError(ex.InnerException);
             }
         }
     }
