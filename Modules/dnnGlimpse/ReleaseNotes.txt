@@ -17,6 +17,11 @@
     <hr/>
     <div class="notes">
 	    <h3>About dnnGlimpse </h3>
+		<h5>Version 1.1.1</h5>
+	    <p>This version includes the following changes:</p>
+        <ul>
+            <li>Resolves page load issues by updating to EF 6, thanks <a href="https://github.com/UpendoVentures">@UpendoVentures</a>!</li>
+        </ul>
 		<h5>Version 1.1.0</h5>
 	    <p>This version includes the following changes:</p>
         <ul>
