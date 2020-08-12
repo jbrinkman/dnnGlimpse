@@ -144,7 +144,7 @@
                       </runtimePolicies>
                     </glimpse>
                   </node>
-                  <node path="/configuration/glimpse" action="update" targetpath="/configuration/glimpse/tabs" collision="ignore">
+                  <node path="/configuration/glimpse" action="update" targetpath="/configuration/glimpse/tabs" collision="overwrite">
                     <tabs>
                       <ignoredTypes>
                         <add type="Glimpse.AspNet.Tab.Cache,Glimpse.AspNet" />
